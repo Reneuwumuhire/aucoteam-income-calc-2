@@ -14,7 +14,6 @@ jobs:
         with:
           fetch-depth: 0
       - uses: nrwl/nx-set-shas@v3
-      - name: Install deps
       - name: Install pnpm
         run: npm install -g pnpm
         run: pnpm install
