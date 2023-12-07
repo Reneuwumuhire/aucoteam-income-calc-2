@@ -16,10 +16,7 @@ jobs:
       - uses: nrwl/nx-set-shas@v3
       - name: Install deps
       - name: Install pnpm
-        uses: actions/setup-node@v3
-        with:
-          node-version: '18.x'
-          cache: 'pnpm'
+        run: npm install -g pnpm@latest-stable
         run: pnpm install
       - name: Lint affected
         run: pnpm nx affected -t lint
