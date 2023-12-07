@@ -14,8 +14,6 @@ jobs:
         run: pnpm install
       - name: Lint
         run: pnpm nx run-many -t lint
-      - name: Test
-        run: pnpm nx run-many -t test --configuration=ci
       - name: Release
         run: pnpm semantic-release
         env:

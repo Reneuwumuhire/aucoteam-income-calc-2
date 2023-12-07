@@ -1,5 +1,3 @@
-import styles from './react-test.module.css';
-
 /* eslint-disable-next-line */
 export interface ReactTestProps {}
 
