@@ -14,8 +14,9 @@ jobs:
         with:
           fetch-depth: 0
       - uses: nrwl/nx-set-shas@v3
-      - name: Install pnpm
+      - name: Install pnpm globaly
         run: npm install -g pnpm
+      - name: Install pnpm
         run: pnpm install
       - name: Lint affected
         run: pnpm nx affected -t lint
