@@ -15,10 +15,10 @@ jobs:
           fetch-depth: 0
       - uses: nrwl/nx-set-shas@v3
       - name: Install deps
-        run: npm ci
+        run: pnpm install
       - name: Lint affected
-        run: npx nx affected -t lint
+        run: pnpm nx affected -t lint
       - name: Test affected
-        run: npx nx affected -t test --configuration=ci
+        run: pnpm nx affected -t test --configuration=ci
       - name: Build affected
-        run: npx nx affected -t build
+        run: pnpm nx affected -t build
