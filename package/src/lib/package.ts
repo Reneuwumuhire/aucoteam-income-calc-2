@@ -1,3 +1,3 @@
-export function package(): string {
+export function packagee(): string {
   return 'package';
 }

@@ -4,6 +4,16 @@
   "sourceRoot": "package/src",
   "projectType": "library",
   "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/package",
+        "main": "package/src/index.ts",
+        "tsConfig": "package/tsconfig.lib.json",
+        "assets": []
+      }
+    },
     "lint": {
       "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"],
