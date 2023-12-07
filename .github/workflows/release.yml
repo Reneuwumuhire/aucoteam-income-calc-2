@@ -8,14 +8,16 @@ jobs:
         with:
           fetch-depth: 0
       - uses: nrwl/nx-set-shas@v3
+      - name: Install pnpm globaly
+        run: npm install -g pnpm
       - name: Install deps
-        run: npm ci
+        run: pnpm install
       - name: Lint
-        run: npx nx run-many -t lint
+        run: pnpm nx run-many -t lint
       - name: Test
-        run: npx nx run-many -t test --configuration=ci
+        run: pnpm nx run-many -t test --configuration=ci
       - name: Release
-        run: npx semantic-release
+        run: pnpm semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
