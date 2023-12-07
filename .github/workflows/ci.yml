@@ -16,7 +16,7 @@ jobs:
       - uses: nrwl/nx-set-shas@v3
       - name: Install deps
       - name: Install pnpm
-        run: npm install -g pnpm@latest-stable
+        run: npm install -g pnpm
         run: pnpm install
       - name: Lint affected
         run: pnpm nx affected -t lint
