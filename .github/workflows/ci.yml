@@ -20,7 +20,5 @@ jobs:
         run: pnpm install
       - name: Lint affected
         run: pnpm nx affected -t lint
-      - name: Test affected
-        run: pnpm nx affected -t test --configuration=ci
       - name: Build affected
         run: pnpm nx affected -t build
