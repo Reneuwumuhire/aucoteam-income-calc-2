@@ -1,0 +1,12 @@
+{
+  "name": "@aucoteam-income-calc-2/react-test",
+  "version": "0.0.1",
+  "main": "./index.js",
+  "types": "./index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./index.mjs",
+      "require": "./index.js"
+    }
+  }
+}

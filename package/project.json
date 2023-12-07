@@ -1,0 +1,23 @@
+{
+  "name": "package",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "package/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["package/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "package/jest.config.ts"
+      }
+    }
+  },
+  "tags": []
+}
